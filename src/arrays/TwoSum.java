@@ -15,7 +15,7 @@ public class TwoSum {
 
             if (numbers[first] + numbers[last] == target ){
 
-                return new int[] {numbers[first],numbers[last]};
+                return new int[] {first,last};
             }else
                 if (numbers[first] + numbers[last] < target){
                     first++;

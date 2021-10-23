@@ -1,9 +1,11 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class ThreeSum {
 
     public static int[] findThreeSum(int[] numbers, int target) {
-
+        Arrays.sort(numbers);
         int firstIndex = 0;
         int secondIndex = firstIndex + 1;
         int lastIndex = numbers.length - 1;
@@ -19,7 +21,6 @@ public class ThreeSum {
                     lastIndex--;
                 }
         }
-
         return new int[]{};
     }
 }
