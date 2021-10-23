@@ -16,7 +16,7 @@ public class CalculateSumOfIntegers {
                 temp += myChar;
             }else {
                 if (temp != ""){
-                    sum+= Integer.parseInt(temp);
+                    sum+= Integer.valueOf(temp);
                 }
             }
         }

@@ -10,5 +10,6 @@ public class CalculateSumOfIntegersTest {
         String str = "1trinix2x30maha07";
 
         assertEquals(40, CalculateSumOfIntegers.performSumOfAllIntegersInaString(str));
+
     }
 }
