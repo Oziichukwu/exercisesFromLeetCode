@@ -3,10 +3,12 @@ package arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConvertRomanNumeralToIntegers {
-    @SuppressWarnings("serial")
-    private static Map<Character, Integer> myMap = new HashMap<>(){{
+public class ConvertRomanNumeralToIntegers{
 
+   private static final Map<Character,Integer>myMap;
+
+    static {
+        myMap = new HashMap<>();
         myMap.put('I',1);
         myMap.put('V', 5);
         myMap.put('X',10);
@@ -14,13 +16,12 @@ public class ConvertRomanNumeralToIntegers {
         myMap.put('C',100);
         myMap.put('D', 500);
         myMap.put('M',1000);
-    }};
-
+    }
     public static int convertRomanNumeralToInteger(String romanNumerals) {
 
         int count = 0;
-        int result = 0;
         int lengthOfString = romanNumerals.length();
+        int result = 0;
 
         while(count < lengthOfString){
 
