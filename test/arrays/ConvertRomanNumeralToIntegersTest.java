@@ -7,8 +7,8 @@ public class ConvertRomanNumeralToIntegersTest{
     @Test
     void convertRomanNumeralsToIntegersTest(){
 
-        String romanNumerals = "V";
+        String romanNumerals = "XCVI";
 
-        assertEquals(5, ConvertRomanNumeralToIntegers.convertRomanNumeralToInteger(romanNumerals));
+        assertEquals(96, ConvertRomanNumeralToIntegers.convertRomanNumeralToInteger(romanNumerals));
     }
 }
