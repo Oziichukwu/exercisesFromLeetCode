@@ -7,7 +7,7 @@ class LongestSubstringTest {
     @Test
     void longestSubstring(){
 
-        String letters = "abcabcbb";
+        String letters = "pwwekw";
 
         int actual = LongestSubstring.performLongestSubstring(letters);
 
