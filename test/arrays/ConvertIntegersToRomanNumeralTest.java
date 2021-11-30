@@ -6,9 +6,9 @@ public class ConvertIntegersToRomanNumeralTest{
     @Test
     void convertIntegersToRomanNumeralsTest(){
 
-        int integer = 495;
+        int integer = 5439;
 
-        assertEquals("XDXCV",ConvertIntegersToRomanNumeral.convertToRomanNumeral(integer));
+        assertEquals("MMMMMCDXXXIX",ConvertIntegersToRomanNumeral.convertToRomanNumeral(integer));
     }
 
 }
