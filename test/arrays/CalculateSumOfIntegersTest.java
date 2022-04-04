@@ -1,11 +1,13 @@
 package arrays;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 public class CalculateSumOfIntegersTest {
 
     @Test
-    void calculateSumOfIntegersInaStringTest(){
+    void calculateSumOfIntegersInaStringTest() {
 
         String str = "1trinix2x30maha07";
 
