@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PhoneLettersCombination {
 
-    private static final String [] map = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    private static final String[] map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public static List<String> performPhoneLetterCombination(String digits) {
 
         List<String> list = new ArrayList<>();
 
-        if (digits == null){
+        if (digits == null) {
             return list;
         }
         list.add("");
@@ -22,12 +22,12 @@ public class PhoneLettersCombination {
 
             for (int j = 0; j < str.length(); j++) {
                 char value = str.charAt(j);
-                for(String character : list){
+                for (String character : list) {
                     next.add(character + value);
                 }
             }
             list = next;
         }
-       return list;
+        return list;
     }
 }

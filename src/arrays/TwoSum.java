@@ -11,17 +11,16 @@ public class TwoSum {
         int first = 0;
         int last = numbers.length - 1;
 
-        while (first < last){
+        while (first < last) {
 
-            if (numbers[first] + numbers[last] == target ){
+            if (numbers[first] + numbers[last] == target) {
 
-                return new int[] {first,last};
-            }else
-                if (numbers[first] + numbers[last] < target){
-                    first++;
-                }else {
-                    last--;
-                }
+                return new int[]{first, last};
+            } else if (numbers[first] + numbers[last] < target) {
+                first++;
+            } else {
+                last--;
+            }
         }
 
         return new int[]{};
