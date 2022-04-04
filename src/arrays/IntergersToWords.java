@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class IntergersToWords {
-    private static final String [] HIGHERWORDS = {"", " Thousand", " Million", " Biullion"};
-    private static final Map<Integer,String> WORDS = new HashMap<Integer,String>(){{
+    private static final String[] HIGHERWORDS = {"", " Thousand", " Million", " Billion"};
+    private static final Map<Integer, String> WORDS = new HashMap<Integer, String>() {{
 
         put(1, "One");
         put(2, "Two");
@@ -36,29 +36,29 @@ public class IntergersToWords {
         put(100, "Hundred");
 
 
-        }};
+    }};
+
     @SuppressWarnings({"serial"})
     public static String performConversionToWords(int number) {
-        if (number == 0){
+        if (number == 0) {
             return "Zero";
         }
         StringBuilder stringBuilder = new StringBuilder();
 
         int count = 0;
 
-        while (number != 0){
+        while (number != 0) {
 
             int remainder = number % 1000;
             StringBuilder builder = convert(remainder);
-            if (builder.length() == 0){
+            if (builder.length() == 0) {
                 count++;
-            }else
-                if (stringBuilder.length()==0){
-                    stringBuilder = builder.append(HIGHERWORDS[count++]);
-                }else {
-                    stringBuilder = builder.append(HIGHERWORDS[count++]).append(" ").append(stringBuilder);
-                }
-                number = number / 1000;
+            } else if (stringBuilder.length() == 0) {
+                stringBuilder = builder.append(HIGHERWORDS[count++]);
+            } else {
+                stringBuilder = builder.append(HIGHERWORDS[count++]).append(" ").append(stringBuilder);
+            }
+            number = number / 1000;
         }
 
         return stringBuilder.toString();
@@ -66,26 +66,21 @@ public class IntergersToWords {
 
     private static StringBuilder convert(int number) {
 
-        if (number == 0){
+        if (number == 0) {
             return new StringBuilder();
-        }else
-            if (number < 20){
-                return new StringBuilder(WORDS.get(number));
-            }else
-                if (number % 100 == 0){
-                    return new StringBuilder(WORDS.get(number/100) + " Hundred");
-                }else
-                    if (number > 100){
-                        return new StringBuilder(WORDS.get(number/100) + " Hundred ").append(convert(number%100));
-                    }else
-                        if (number % 10 == 0){
-                            return new StringBuilder(WORDS.get(number));
-                        }else
-                            if (number > 10){
-                                return new StringBuilder(WORDS.get(number/10*10) + " " + WORDS.get(number% 10));
-                            }else {
-                                return new StringBuilder();
-                            }
+        } else if (number < 20) {
+            return new StringBuilder(WORDS.get(number));
+        } else if (number % 100 == 0) {
+            return new StringBuilder(WORDS.get(number / 100) + " Hundred");
+        } else if (number > 100) {
+            return new StringBuilder(WORDS.get(number / 100) + " Hundred ").append(convert(number % 100));
+        } else if (number % 10 == 0) {
+            return new StringBuilder(WORDS.get(number));
+        } else if (number > 10) {
+            return new StringBuilder(WORDS.get(number / 10 * 10) + " " + WORDS.get(number % 10));
+        } else {
+            return new StringBuilder();
+        }
 
     }
 

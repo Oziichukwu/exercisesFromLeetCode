@@ -6,11 +6,11 @@ public class Palindrone {
 
         Integer num = numbers;
 
-       String word =  num.toString();
+        String word = num.toString();
 
-        for (int i = 0, j = word.length()-1; i < j; i++, j--) {
+        for (int i = 0, j = word.length() - 1; i < j; i++, j--) {
 
-            if (word.charAt(i) != word.charAt(j)){
+            if (word.charAt(i) != word.charAt(j)) {
                 return false;
             }
         }
