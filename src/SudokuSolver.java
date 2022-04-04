@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class SudokuSolver {
+public class SudokuSolver {
+
+
+    public static void solveSudoku(char[][] board) {
+
+
+    }
 }
