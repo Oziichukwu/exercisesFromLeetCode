@@ -1,11 +1,13 @@
 package arrays;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-public class ConvertRomanNumeralToIntegersTest{
+
+public class ConvertRomanNumeralToIntegersTest {
 
     @Test
-    void convertRomanNumeralsToIntegersTest(){
+    void convertRomanNumeralsToIntegersTest() {
 
         String romanNumerals = "XCVI";
 
